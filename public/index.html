@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Könyvtár</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 Online Könyvtár</h1>
+    </header>
+    <section class="auth-section">
+
+        <input type="text" id="username" placeholder="Felhasználónév">
+
+        <input type="password" id="password" placeholder="Jelszó">
+
+        <button onclick="register()">Regisztráció</button>
+
+        <button onclick="login()">Bejelentkezés</button>
+
+        <p id="auth-message"></p>
+        <div id="user-info"></div>
+
+        <button onclick="logout()">Kijelentkezés</button>
+    </section>
+    <main>
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Keresés cím, szerző vagy kategória alapján">
+        <button onclick="searchBooks()">Keresés</button>
+        <button onclick="resetSearch()">Összes könyv</button>
+    </section>
+<section class="admin-section" id="admin-section">
+    <h2>Új könyv hozzáadása</h2>
+
+    <input type="text" id="newTitle" placeholder="Cím">
+    <input type="text" id="newAuthor" placeholder="Szerző">
+    <input type="number" id="newYear" placeholder="Kiadási év">
+    <input type="text" id="newCategory" placeholder="Kategória">
+    <input type="number" id="newCopies" placeholder="Példányszám">
+    <input type="text" id="newImageUrl" placeholder="Borítókép URL">
+
+    <textarea id="newDescription" placeholder="Rövid leírás"></textarea>
+    <textarea id="newLongDescription" placeholder="Részletes bemutató"></textarea>
+
+    <button onclick="addBook()">Könyv hozzáadása</button>
+
+    <p id="admin-message"></p>
+</section>
+    <div id="books-container"></div>
+</main>
+<section class="loans-section">
+
+    <h2>📖 Az én kölcsönzéseim</h2>
+
+    <div id="my-loans-container"></div>
+
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
