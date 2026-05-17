@@ -28,3 +28,4 @@ Az alkalmazás egy online könyvtár rendszer, amely lehetővé teszi:
 
 ```bash
 npm install
+```
